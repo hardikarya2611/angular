@@ -1,0 +1,72 @@
+<div class="container">
+    <h1>Form Builder </h1>
+
+    <form (ngSubmit)="giveForm()">
+
+        <div class="input-group">
+            <label for="inputName">Write your Name:</label>
+            <input type="text" id="inputName" [(ngModel)]="inputName" name="inputName" required />
+        </div>
+
+        <div class="input-group">
+            <label for="inputType">Input Type:</label>
+            <select id="inputType" [(ngModel)]="inputType" name="inputType" required>
+                <option value="email">Email</option>
+                <option value="text">Text</option>
+                <option value="file">File</option>
+                <option value="checkbox">Checkbox</option>
+                <option value="radio">Radio</option>
+                <option value="dropdown">Dropdown</option>
+                <option value="number">Number</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="inputLabel">Input Label:</label>
+            <input type="text" id="inputLabel" [(ngModel)]="inputLabel" name="inputLabel" required />
+        </div>
+
+        <div class="input-group">
+            <label for="required">is Required:</label>
+            <select id="required" [(ngModel)]="required" name="required">
+                <option value="false">False</option>
+                <option value="true">True</option>
+            </select>
+        </div>
+
+
+        <button type="button" (click)="giveForm()">Add in Table below</button>
+
+    </form>
+
+    <table class="tl">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Label</th>
+                <th>Required</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(element of formElements; track element.name){
+            <tr>
+                <td>{{ element.name }}</td>
+                <td>{{ element.label }}</td>
+                <td>{{ element.required ? 'Yes' : 'No' }}</td>
+                <td>{{ element.type }}</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <button (click)="createForm()">Generate Form HTML</button>
+
+    <div id="generatedForm">
+        @if(generateHtml){
+        <h3>Generated Form HTML</h3>
+        <pre>{{ generateHtml }}</pre>
+        }
+    </div>
+
+</div>

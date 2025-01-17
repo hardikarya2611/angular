@@ -1,0 +1,114 @@
+/* General Body Style */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Centered Title Style */
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+/* Styling for .tl class */
+.tl {
+    margin-bottom: 30px;
+}
+
+/* New Company Container */
+.new-comp {
+    border: 2px solid #333;
+    background-color: #4CAF50; /* Green color */
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Container Style */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Input Group Style */
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Input Group Spacing */
+.input-group {
+    margin-bottom: 20px;
+}
+
+/* Input, Select, and Button Styles */
+.input-group input,
+.input-group select,
+button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Button Base Style */
+button {
+    background-color: #f0f8ff;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: bisque;
+    transition: background-color 0.3s ease;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #333;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table Header and Cell Styling */
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    color: #fff;
+}
+
+table th {
+    background-color: #444;
+    font-size: 1.1em;
+}
+
+/* Zebra Striping for Table Rows */
+table tr:nth-child(even) {
+    background-color: #555;
+}
+
+table tr:hover {
+    background-color: #666;
+}
